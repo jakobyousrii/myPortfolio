@@ -1,0 +1,218 @@
+.portfolioSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem 3rem;
+    gap: 2rem;
+}
+
+.portfoliosDiv{
+    text-align: center;
+}
+
+.H1{
+    display: inline-block;
+    position: relative;
+    font-size: 4rem;
+    color: rgba(0,0,0,0.7);
+}
+
+.H1::before{
+    content:"";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 6rem;
+    border-left: 3px solid rgba(213, 56, 56, 0.9);;
+    animation: typingAnimes 4s ease-out infinite forwards;
+    margin: 0 1rem;
+    background-color: white;
+}
+
+@keyframes typingAnimes {
+    
+    0%{
+        left: 0%;
+        width: 100%;
+    }
+    50%{
+        left: 100%;
+        width: 0;
+    }
+
+    100%{
+        left: 0;
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.portfolios{
+    width: 100%;
+}
+
+.portfolios ul{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0, 1fr));
+    gap: 2rem;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.portfolios ul li{
+    box-shadow: 3px 0px 3px 3px rgba(0,0,0,0.25); 
+    padding: 0%;
+    margin: 0;
+    border-radius: 30px;
+    background-color: transparent;
+    color: black;
+}
+
+
+.portfolios ul li img{
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+    opacity: 0.9;
+}
+
+.portfolios ul li article{
+    padding: 1rem 2rem;
+}
+
+.portfolios ul li h3{
+    color:rgba(213, 56, 56, 0.9);
+}
+.portfolios ul li button{
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    background: rgba(213, 56, 56, 0.9);
+    outline: none;
+    border: none;
+    margin: 1rem 0;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.portfolios ul li button:hover, .portfolios ul li button:active{
+    transform: scale(1.05);
+    background: rgba(255,0,0, 0.8);
+
+}
+.portfolios ul li button a{
+   
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.9)
+}
+
+.hrLine{
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    width: 20%;
+    height: 45%;
+    -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    background-color: black;
+    opacity: 0.1;
+    animation: hrAnimation 25s ease-in infinite; 
+}
+
+@keyframes hrAnimation {
+    0%{
+        left: 0%;
+        transform: rotate(0deg);
+    }
+
+    50%{
+       left: 80%;
+       transform: rotate(180deg);
+    }
+    100%{
+        left: 0%;
+        transform: rotate(0deg);
+    }
+}
+
+@media (max-width: 750px) {
+    .portfolios{
+        margin: 0;
+    }
+
+    .portfolios ul{
+        display: grid;
+        grid-template-columns: repeat(1,minmax(0, 1fr));
+        gap: 2rem;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .hrLine{
+display: none;
+    }
+    
+}
+
+@media screen and (min-width: 750px) and (max-width: 1200px) {
+    .portfolios{
+        margin: 0;
+    }
+
+    .portfolios ul{
+        display: grid;
+        grid-template-columns: repeat(2,minmax(0, 1fr));
+        gap: 2rem;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .hrLine{
+        display: none;
+            }
+}
+
+@media (max-width: 286px) {
+    
+    .H1{
+        font-size: 2rem;
+    }
+
+    .H1::before{
+        height: 8.5rem;
+    }
+}
+
+@media (min-width: 287px) and (max-width: 382px) {
+    
+    .H1{
+        font-size: 2rem;
+    }
+
+    .H1::before{
+        height: 5.5rem;
+    }
+}
+
+@media (min-width: 383px) and (max-width: 525px) {
+    
+    .H1{
+        font-size: 3rem;
+    }
+
+    .H1::before{
+        height: 8rem;
+    }
+}
+
+@media (min-width: 525px) and (max-width: 1199px) {
+    
+    .H1{
+        font-size: 3rem;
+    }
+
+    .H1::before{
+        height: 4rem;
+    }
+}
+

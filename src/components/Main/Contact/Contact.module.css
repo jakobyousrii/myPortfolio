@@ -1,0 +1,98 @@
+.contactSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+    padding: 0 2rem;
+}
+
+.contactSection .articleSocial{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(255,0, 0, 0.15);
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    position: relative;
+    z-index: 1;
+}
+
+.contactSection .articleSocial h2{
+    font-size: 2rem;
+}
+
+.contactSection .articleSocial ul{
+display: flex;
+gap: 1rem;
+}
+
+.contactSection .articleSocial ul li{
+    list-style: none;
+    font-size: 2rem;
+}
+.contactSection .articleSocial ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.contactSection .articleSocial ul li a:hover, .contactSection .articleSocial ul li a:active {
+    color: red;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+
+.contactSection hr{
+    width: 100%;
+    height: 100vh;
+    border: none;
+    background-color: red;
+    opacity: 0.2;
+    position: absolute;
+    clip-path: polygon(50% 0, 10% 50%, 50% 100%, 0 50%);
+    animation: animationLine 12s ease-in infinite;
+}
+
+@keyframes animationLine {
+    
+
+    0%{
+        clip-path: polygon(50% 0, 10% 50%, 50% 100%, 0 50%);
+    }
+    50%{
+        clip-path: polygon(70% 0, 30% 50%, 50% 100%, 0 50%);
+    }
+    100%{
+        clip-path: polygon(50% 0, 10% 50%, 50% 100%, 0 50%);
+    }
+}
+
+
+
+@media (max-width: 1000px) {
+    .contactSection{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        padding-top: 2rem;
+        gap: 1rem;
+    }
+    .contactSection .articleSocial h2{
+        font-size: 1.3rem;
+    }
+    .contactSection .articleSocial ul{
+        padding: 0;
+    }
+    .contactSection .articleSocial{
+        width: 100%;
+        height: 40vh;
+        background-color: rgba(255,0, 0, 0.15);
+        clip-path: none;
+    }
+}

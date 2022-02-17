@@ -1,0 +1,251 @@
+*{
+    box-sizing: border-box;
+}
+
+.Jumbotron{
+    position: relative;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 50%, rgba(156,19,19,1) 100%);
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    z-index: 1;
+    padding-top: 3rem;
+    padding-bottom: 1.4rem;
+}
+
+.JumbotronAbout{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    font-size: 1.2rem;
+    min-height: 0;
+    }
+    
+
+.JumbotronAbout .Name{
+    font-weight: 1000;
+    margin: 1rem;
+    font-size: 2.7rem;
+}
+
+.Jumbotron article{
+    padding: 2rem;
+}
+
+
+.Jumbotron .JumbotronAbout .visaImg {
+    width: 70%;
+    padding: 0;
+    margin: 0;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+
+.swipeDown{
+    background-color: transparent;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50px;
+    color: white;
+    border-color: white;
+    animation: swipeAnimation 2s ease-in-out;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+
+.jumboParagraph{
+    margin: 0;
+}
+
+.divAnimation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.letterShow{
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: red;
+    line-height: 30px;
+    height: 30px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.letterShow li{
+    position: relative;
+    top: 0;
+    list-style: none;
+    text-align: start;
+    animation: slide 12s steps(3) infinite;
+}
+
+@keyframes slide {
+
+    0%{
+        top: 0;
+    }
+    100% {
+        top: -90px;
+    }
+}
+
+
+.letterShow li span{
+position: relative;
+}
+
+.letterShow li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid red;
+    animation: typing 4s steps(25) infinite;
+    background-color: black;
+}
+
+
+@keyframes typing {
+
+    100% {
+        left: 100%;
+        margin: 0 0.9rem;
+    }
+}
+
+
+@keyframes swipeAnimation {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(20px);
+    }
+
+    100%{   
+        transform: translateY(0);
+    }
+    
+}
+
+@keyframes swipeAnimationEntering {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+
+}
+
+@media (max-width: 425px){
+    .Jumbotron{
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        background: rgb(99,5,5);
+        background: linear-gradient(0deg, rgba(99,5,5,1) 0%, rgba(59,3,3,1) 15%, rgba(0,0,0,1) 41%);
+        padding-bottom: 2rem;
+    }
+    .JumbotronAbout{
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-size: 1rem;
+        padding-top: 2rem;
+    }
+    .Jumbotron .JumbotronAbout .visaImg{
+        width: 100%;
+        height: 200px;
+        clip-path: circle(50%);
+        padding: 0;
+        margin: 0;
+
+    }
+    .Jumbotron .JumbotronAbout article .Name{
+        font-size: 1.9rem;
+    }
+    .workingWith{
+        font-size: 1rem;
+    }
+
+    .Jumbotron .JumbotronAbout .divAnimation{
+        flex-direction: column;
+    }
+    .letterShow li span::after{
+        height: 100%;
+        border: 1px solid black;
+        border-left: 2px solid red;
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 737px) {
+    .Jumbotron{
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        background: rgb(99,5,5);
+        background: linear-gradient(0deg, rgba(99,5,5,1) 0%, rgba(59,3,3,1) 15%, rgba(0,0,0,1) 41%);
+        padding-bottom: 2rem;
+    }
+    .JumbotronAbout{
+        min-height: 0vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-size: 1rem;
+    }
+    .Jumbotron .JumbotronAbout .visaImg{
+        width: 100%;
+        height: 200px;
+        clip-path: circle(50%);
+        padding: 0;
+        margin: 0;
+
+    }
+    .Jumbotron .JumbotronAbout article .Name{
+        font-size: 1.9rem;
+    }
+    .workingWith{
+        font-size: 1rem;
+    }
+
+    .Jumbotron .JumbotronAbout .divAnimation{
+        flex-direction: column;
+    }
+    .letterShow li span::after{
+        height: 100%;
+        border: 1px solid black;
+        border-left: 2px solid red;
+    }
+}
+

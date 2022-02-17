@@ -1,0 +1,124 @@
+.skillSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    color: rgba(255,255,255,0.9);
+    min-height: 100vh;
+}
+
+.aboutSkills{
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    line-height: 1.4rem;
+
+}
+
+.aboutSkills h2{
+    border-bottom: 2px solid rgba(255,0,0,0.8);
+    padding-bottom: 1rem;
+    width: fit-content;
+    font-size: 2rem;
+}
+
+.skillTable{
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.skillSection article {
+    width: 100%;
+}
+
+.skillSection article:nth-child(1){
+    margin: 0 5rem;
+}
+
+.skillSection  .skillTable ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    gap: 1rem;
+}
+
+.skillSection .skillTable ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 1.7rem;
+    width: 80%;
+    gap: 2rem
+}
+
+.skillSection .skillTable ul li span{
+    display: inline-block;
+    width: 60%;
+    height: 1rem;
+    background-color: rgba(255,255,255,0.2);
+}
+
+.skillSection .skillTable ul li span::before{
+    content: "";
+    position: relative;
+    background-color: rgba(255,0,0,0.7);
+    display: block;
+    width: 80%;
+    height: 1rem;
+    animation: animationSkills 1s ease-in forwards;
+} 
+
+.skillSection .skillTable ul li:nth-child(n+4) span::before{
+    width: 60%;
+} 
+.skillSection .skillTable ul li:nth-child(5) span::before{
+    width: 70%;
+} 
+
+
+@keyframes animationSkills {
+    from{
+        width: 0%;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .skillSection{
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+    .aboutSkills{
+        text-align: center;
+        padding: 0 1.2rem;
+    }
+    .aboutSkills h2{
+        margin: 3rem  auto 2rem auto;
+    }
+    
+    .aboutSkills p{
+        font-size: 0.9rem;
+    
+    }
+}
+
+@media (min-width: 750px) and (max-width: 1000px) {
+    .skillSection{
+        flex-direction: column;
+        padding: 2rem 0;
+    }
+    .aboutSkills{
+        text-align: center;
+        padding: 0 3rem;
+    }
+    .aboutSkills h2{
+        margin: 3rem  auto 2rem auto;
+    }
+}

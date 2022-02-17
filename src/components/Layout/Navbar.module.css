@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+
+.Navbar{
+    position: absolute;
+    z-index: 3;
+    background-color: transparent;
+    padding: 0rem 2rem;
+    font-weight: 700;
+    color: white;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+.changeColor{
+    background-color: blue !important;
+}
+
+.hamburgerButton{
+    position: fixed;
+    top: 1.5rem;
+    right: 2rem;
+    z-index: 10;
+    border: none;
+    background-color: rgba(0,0,0,0.5);
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 3rem;
+    color: white;
+    height: 3rem;
+}
+
+.hamburgerClicked{
+    animation: transitionButton ease-in 300ms;
+    color: red;
+    font-weight: 300;
+    background-color: transparent;
+}
+
+.hamburgerClickedFinish{
+    color: red;
+    font-weight: 300;
+    background-color: transparent;
+}
+.hamburgerExit{
+    animation: transitionButtonExit ease-out 300ms forwards;
+    color: white;
+}
+
+@keyframes transitionButton {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes transitionButtonExit {
+    from{
+        transform: rotate(120deg);
+    }
+    to{
+        transform: rotate(0);
+    }
+}
+
+@media (max-width: 1000px) {
+    
+    .hamburgerButton{
+        top: 1.3rem;
+    }
+    
+    .Navbar h1{
+        font-size: 2rem;
+    }
+}
