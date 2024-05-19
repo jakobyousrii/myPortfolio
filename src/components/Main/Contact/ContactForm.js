@@ -45,7 +45,7 @@ const ContactForm = (props) => {
     return (
         <Fragment>
             <form onSubmit={onSubmitHandler} className={classes.contactForm}>
-                <h2>Fell Free To Contact Me!</h2>
+                <h2>Feel Free To Contact Me!</h2>
                 <div>
                     <label>Email:</label>
                     <input className={emailMessage} value={emailValue} onChange={emailOnChangeHandler} onBlur={emailOnBlur} type="email" placeholder="enter your email..." />
