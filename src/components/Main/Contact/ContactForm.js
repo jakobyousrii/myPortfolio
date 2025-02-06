@@ -117,7 +117,7 @@ const ContactForm = (props) => {
             onBlur={messageOnBlur}
           ></textarea>
           {!messagecheckValidation && messageIsTouched && (
-            <small>message cannot be empty!</small>
+            <small>message can't be empty!</small>
           )}
         </div>
         <div>
